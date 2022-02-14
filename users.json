@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "6209a69ebdc32604143bbf69"
+  },
+  "username": "DevPaski",
+  "password": "paskiadmin",
+  "firstname": "Paski",
+  "lastname": "Admin",
+  "email": "fpaskix@gmail.com",
+  "gender": "male",
+  "wand": {
+    "core": "phoenix",
+    "wood": "maple",
+    "length": "38"
+  },
+  "school": {
+    "name": "Hogwarts",
+    "country": "England",
+    "house": "gryffindor"
+  }
+},{
+  "_id": {
+    "$oid": "6209a84abdc32604143bbf6a"
+  },
+  "username": "Gerard",
+  "password": "gerardAdmin",
+  "firstname": "Gerard",
+  "lastname": "Admin",
+  "email": "gerardAdmin@gmail.com",
+  "gender": "male",
+  "wand": {
+    "core": "unicorn",
+    "wood": "fir",
+    "length": "35"
+  },
+  "school": {
+    "name": "Hogwarts",
+    "country": "England",
+    "house": "gryffindor"
+  }
+}]
