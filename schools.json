@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "620a2e16e1d260332e1b12e9"
+  },
+  "name": {
+    "hogwarts": {
+      "id": {
+        "$oid": "620a3574e1d260332e1b12ea"
+      },
+      "house": [
+        "gryffindor",
+        "slytherin",
+        "hufflepuff",
+        "ravenclow"
+      ]
+    },
+    "ilvermorny": {
+      "id": {
+        "$oid": "620a3892e1d260332e1b12eb"
+      },
+      "house": [
+        "horned serpent",
+        "wampus",
+        "thunderbird",
+        "pukwudgie"
+      ]
+    },
+    "durmstrang": {
+      "id": {
+        "$oid": "620a38b1e1d260332e1b12ed"
+      },
+      "house": [
+        "soscrofa",
+        "ucilena",
+        "vulpelara",
+        "wolverine"
+      ]
+    },
+    "beausxbatons": {
+      "id": {
+        "$oid": "620a38c6e1d260332e1b12ee"
+      },
+      "house": [
+        "bellefeuille",
+        "papillonlisse",
+        "ombrelune"
+      ]
+    }
+  }
+}]
