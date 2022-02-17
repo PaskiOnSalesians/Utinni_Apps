@@ -35,7 +35,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget _entryField(String title, {bool isPassword = false}) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: EdgeInsets.symmetric(vertical: 7),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -177,6 +177,15 @@ class _SignUpPageState extends State<SignUpPage> {
       ]                    
     );
   }
+
+  // Widget _logo(){
+  //   return Container(
+  //     child: Container(
+  //       width: 100,
+  //       height: 100,
+  //     ),
+  //   )
+  // }
 
   @override
   Widget build(BuildContext context) {
