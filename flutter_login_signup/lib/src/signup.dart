@@ -143,30 +143,38 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  bool isChecked = false;
+  bool _agree = false;
 
-  Widget _newsletter() {
-    Color getColor(Set<MaterialState> states) {
-      const Set<MaterialState> interactiveStates = <MaterialState>{
-        MaterialState.pressed,
-        MaterialState.hovered,
-        MaterialState.focused,
-      };
-      if (states.any(interactiveStates.contains)) {
-        return Colors.blue;
-      }
-      return Color(0xffcc00cc);
-    }
-
-    return Checkbox(
-      checkColor: Colors.white,
-      fillColor: MaterialStateProperty.resolveWith(getColor),
-      value: isChecked,
-      onChanged: (bool? value) {
-        setState(() {
-          isChecked = value!;
-        });
-      },
+  Widget _condiciones() {
+    return Wrap(crossAxisAlignment: WrapCrossAlignment.center,
+      children: <Widget>[
+        Checkbox(
+          value: _agree, 
+          onChanged: (isChecked) {
+            setState(() {
+              _agree = isChecked!;
+            });
+          }
+        ),
+        Text("I Agree to the "),
+        InkWell(
+          onTap: () {},
+          child: Text(
+            "Terms of services",
+            style: TextStyle(
+              fontWeight: FontWeight.bold),
+          ),
+        ),
+        Text(" & "),
+        InkWell(
+          onTap: () {},
+          child: Text(
+            "Privacy Policy",
+            style: TextStyle(
+              fontWeight: FontWeight.bold),
+          ),
+        ),
+      ]                    
     );
   }
 
@@ -194,7 +202,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     SizedBox(
                       height: 10
                     ),
-                    _newsletter(),
+                    _condiciones(),
                     SizedBox(
                       height: 20,
                     ),
