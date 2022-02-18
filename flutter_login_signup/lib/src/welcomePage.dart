@@ -91,23 +91,42 @@ class _WelcomePageState extends State<WelcomePage> {
         ));
   }
 
-  Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-          text: 'Dragon',
-          style: GoogleFonts.portLligatSans(
-            textStyle: Theme.of(context).textTheme.headline1,
-            fontSize: 30,
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-          ),
-          children: [
-            TextSpan(
-              text: 'App',
-              style: TextStyle(color: Colors.black, fontSize: 30),
-            ),
-          ]),
+  // Widget _title() {
+  //   return RichText(
+  //     textAlign: TextAlign.center,
+  //     text: TextSpan(
+  //         text: 'Dragon',
+  //         style: GoogleFonts.portLligatSans(
+  //           textStyle: Theme.of(context).textTheme.headline1,
+  //           fontSize: 30,
+  //           fontWeight: FontWeight.w700,
+  //           color: Colors.white,
+  //         ),
+  //         children: [
+  //           TextSpan(
+  //             text: 'App',
+  //             style: TextStyle(color: Colors.black, fontSize: 30),
+  //           ),
+  //         ]),
+  //   );
+  // }
+
+  Widget _logo() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 55),
+      child: Row(
+        children: <Widget>[
+          Image(
+            image: AssetImage('img/logoHP.png'),
+            width: 100,
+            height: 100,
+          ), // Image.asset('img/logoHP.png')
+          Text(
+            'Horrocrux',
+            style: TextStyle(fontSize: 30),
+          )
+        ],
+      ),
     );
   }
 
@@ -119,6 +138,11 @@ class _WelcomePageState extends State<WelcomePage> {
             padding: EdgeInsets.symmetric(horizontal: 20),
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.3), BlendMode.dstATop),
+                image: AssetImage('img/fondo_login.jpg'),
+              ),
               borderRadius: BorderRadius.all(Radius.circular(5)),
               boxShadow: <BoxShadow>[
                 BoxShadow(
@@ -130,12 +154,14 @@ class _WelcomePageState extends State<WelcomePage> {
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xffcc00cc), Color(0xff993399)])),
+                  colors: [Color(0xff3399ff), Color(0xffff3399)])
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                _title(),
+                //_title(),
+                _logo(),
                 SizedBox(
                   height: 80,
                 ),

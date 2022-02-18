@@ -66,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
           borderRadius: BorderRadius.all(Radius.circular(5)),
           boxShadow: <BoxShadow>[
             BoxShadow(
-                color: Colors.grey.shade200,
+                color: Color.fromRGBO(0, 0, 0, 0.3),
                 offset: Offset(2, 4),
                 blurRadius: 5,
                 spreadRadius: 2)
@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
               end: Alignment.centerRight,
               colors: [Color(0xffcc00cc), Color(0xff660066)])),
       child: Text(
-        'Login',
+        'Register Now',
         style: TextStyle(fontSize: 20, color: Colors.white),
       ),
     );
@@ -196,22 +196,39 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-          text: 'Dragon',
-          style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-              color: Color(0xffcc00cc)
-          ),
-          children: [
-            TextSpan(
-              text: 'App',
-              style: TextStyle(color: Colors.black, fontSize: 30),
-            ),
-          ]),
+  // Widget _title() {
+  //   return RichText(
+  //     textAlign: TextAlign.center,
+  //     text: TextSpan(
+  //         text: 'Dragon',
+  //         style: TextStyle(
+  //             fontSize: 30,
+  //             fontWeight: FontWeight.w700,
+  //             color: Color(0xffcc00cc)),
+  //         children: [
+  //           TextSpan(
+  //             text: 'App',
+  //             style: TextStyle(color: Colors.black, fontSize: 30),
+  //           ),
+  //         ]),
+  //   );
+  // }
+  Widget _logo() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 55),
+      child: Row(
+        children: <Widget>[
+          Image(
+            image: AssetImage('img/logoHP.png'),
+            width: 100,
+            height: 100,
+          ), // Image.asset('img/logoHP.png')
+          Text(
+            'Horrocrux',
+            style: TextStyle(fontSize: 30),
+          )
+        ],
+      ),
     );
   }
 
@@ -230,6 +247,14 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         body: Container(
       height: height,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          colorFilter: new ColorFilter.mode(
+              Colors.black.withOpacity(0.8), BlendMode.dstATop),
+          image: AssetImage('img/fondo_register.jpg'),
+        ),
+      ),
       child: Stack(
         children: <Widget>[
           Container(
@@ -240,22 +265,23 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(height: height * .2),
-                  _title(),
+                  //_title(),
+                  _logo(),
                   SizedBox(height: 50),
                   _emailPasswordWidget(),
-                  SizedBox(height: 20),
+                  SizedBox(height: 200),
                   _submitButton(),
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 10),
                     alignment: Alignment.centerRight,
-                    child: Text('Forgot Password ?',
+                    child: Text('Forgot Password',
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.w500)),
                   ),
-                  _divider(),
-                  _googleButton(),
-                  SizedBox(height: height * .055),
-                  _createAccountLabel(),
+                  // _divider(),
+                  // _googleButton(),
+                  //SizedBox(height: height * .055),
+                  //_createAccountLabel(),
                 ],
               ),
             ),

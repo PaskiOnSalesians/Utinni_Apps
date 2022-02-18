@@ -64,7 +64,7 @@ class _SignUpPageState extends State<SignUpPage> {
           borderRadius: BorderRadius.all(Radius.circular(5)),
           boxShadow: <BoxShadow>[
             BoxShadow(
-                color: Colors.grey.shade200,
+                color: Color.fromRGBO(0, 0, 0, 0.3),
                 offset: Offset(2, 4),
                 blurRadius: 5,
                 spreadRadius: 2)
@@ -114,18 +114,18 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  Widget _title() {
-    return RichText(
-      textAlign: TextAlign.right,
-      text: TextSpan(
-        text: 'DragonApp',
-        style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w700,
-            color: Color(0xffcc00cc)),
-      ),
-    );
-  }
+  // Widget _title() {
+  //   return RichText(
+  //     textAlign: TextAlign.right,
+  //     text: TextSpan(
+  //       text: 'DragonApp',
+  //       style: TextStyle(
+  //           fontSize: 30,
+  //           fontWeight: FontWeight.w700,
+  //           color: Color(0xffcc00cc)),
+  //     ),
+  //   );
+  // }
 
   Widget _logo() {
     return Container(
@@ -145,6 +145,26 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
     );
   }
+
+  // Widget _title() {
+  //   return RichText(
+  //     textAlign: TextAlign.center,
+  //     text: TextSpan(
+  //         text: 'Dragon',
+  //         style: TextStyle(
+  //             fontSize: 30,
+  //             fontWeight: FontWeight.w700,
+  //             color: Color(0xffcc00cc)
+  //         ),
+
+  //         children: [
+  //           TextSpan(
+  //             text: 'App',
+  //             style: TextStyle(color: Colors.black, fontSize: 30),
+  //           ),
+  //         ]),
+  //   );
+  // }
 
   Widget _emailPasswordWidget() {
     return Column(
@@ -214,6 +234,14 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
       body: Container(
         height: height,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            colorFilter: new ColorFilter.mode(
+                Colors.black.withOpacity(0.7), BlendMode.dstATop),
+            image: AssetImage('img/fondo_register.jpg'),
+          ),
+        ),
         child: Stack(
           children: <Widget>[
             Container(
