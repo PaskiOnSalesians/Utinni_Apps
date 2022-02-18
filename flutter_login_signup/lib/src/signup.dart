@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_login_signup/src/loginPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignUpPage extends StatefulWidget {
-  SignUpPage({Key ?key, this.title}) : super(key: key);
+  SignUpPage({Key? key, this.title}) : super(key: key);
 
   final String? title;
 
@@ -35,12 +36,12 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget _entryField(String title, {bool isPassword = false}) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: EdgeInsets.symmetric(vertical: 5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           SizedBox(
-            height: 10,
+            height: 5,
           ),
           TextField(
               obscureText: isPassword,
@@ -101,6 +102,7 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             Text(
               'Login',
+              textAlign: TextAlign.right,
               style: TextStyle(
                   color: Color(0xffcc00cc),
                   fontSize: 13,
@@ -114,22 +116,71 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget _title() {
     return RichText(
-      textAlign: TextAlign.center,
+      textAlign: TextAlign.right,
       text: TextSpan(
-          text: 'Dragon',
-          style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-              color: Color(0xffcc00cc)
-          ),
-
-          children: [
-            TextSpan(
-              text: 'App',
-              style: TextStyle(color: Colors.black, fontSize: 30),
-            ),
-          ]),
+        text: 'DragonApp',
+        style: TextStyle(
+            fontSize: 30,
+            fontWeight: FontWeight.w700,
+            color: Color(0xffcc00cc)),
+      ),
     );
+  }
+
+  Widget _logo() {
+    return Container(
+        padding: EdgeInsets.symmetric(horizontal: 65),
+        child: Row(
+          children: <Widget>[
+            Image(
+              image: AssetImage('img/logoHP.png'),
+              width: 100,
+              height: 100,
+            ), // Image.asset('img/logoHP.png')
+            Text(
+              'Horrocrux',
+              style: TextStyle(fontSize: 30),
+            )
+          ],
+        )
+
+        //  Row(
+        //   children: <Widget>[
+        //     Hero(
+        //       tag: actor.id,
+        //       child: ClipRRect(
+        //         borderRadius: BorderRadius.circular(20.0),
+        //         child: Image(
+        //           image: NetworkImage(actor.getFoto()),
+        //           height: 150.0,
+        //         ),
+        //       ),
+        //     ),
+        //     SizedBox(width: 20.0),
+        //     Flexible(
+        //       child: Column(
+        //         crossAxisAlignment: CrossAxisAlignment.start,
+        //         children: <Widget>[
+        //           Text(actor.name,
+        //               style: Theme.of(context).textTheme.bodyText1,
+        //               overflow: TextOverflow.ellipsis),
+        //           /*Text(actor.creditId,
+        //               style: Theme.of(context).textTheme.bodyText1,
+        //               overflow: TextOverflow.ellipsis),*/
+        //           Row(
+        //               // children: <Widget>[
+        //               //   Icon(Icons.star_border),
+        //               //   // Text(actor.gender.toString(),
+        //               //   Text(actor.items.toString(),
+        //               //       style: Theme.of(context).textTheme.bodyText1)
+        //               // ],
+        //               )
+        //         ],
+        //       ),
+        //     )
+        //   ],
+        // ),
+        );
   }
 
   Widget _emailPasswordWidget() {
@@ -185,23 +236,20 @@ class _SignUpPageState extends State<SignUpPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    SizedBox(height: height * .2),
-                    _title(),
+                    SizedBox(height: height * .25),
+                    _logo(),
+                    // _title(),
                     SizedBox(
-                      height: 50,
+                      height: 20,
                     ),
                     _emailPasswordWidget(),
-                    SizedBox(
-                      height: 10
-                    ),
+                    SizedBox(height: 20),
                     _newsletter(),
                     SizedBox(
                       height: 20,
                     ),
                     _submitButton(),
-                    SizedBox(
-                      height: 20
-                    ),
+                    SizedBox(height: 0),
                     _loginAccountLabel(),
                   ],
                 ),
