@@ -178,14 +178,24 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  // Widget _logo(){
-  //   return Container(
-  //     child: Container(
-  //       width: 100,
-  //       height: 100,
-  //     ),
-  //   )
-  // }
+  Widget _logo() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 55),
+      child: Row(
+        children: <Widget>[
+          Image(
+            image: AssetImage('img/logoHP.png'),
+            width: 100,
+            height: 100,
+          ), // Image.asset('img/logoHP.png')
+          Text(
+            'Horrocrux',
+            style: TextStyle(fontSize: 30),
+          )
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -203,9 +213,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     SizedBox(height: height * .2),
-                    _title(),
+                    //_title(),
+                    _logo(),
                     SizedBox(
-                      height: 50,
+                      height: 15,
                     ),
                     _emailPasswordWidget(),
                     SizedBox(
