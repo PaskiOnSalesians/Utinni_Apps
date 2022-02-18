@@ -204,11 +204,11 @@ class _SignUpPageState extends State<SignUpPage> {
       body: Container(
         height: height,
         decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.9), BlendMode.dstATop),
-                image: AssetImage('img/fondo_register.jpg'),
-              ),
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.7), BlendMode.dstATop),
+            image: AssetImage('img/fondo_register.jpg'),
+          ),
         ),
         child: Stack(
           children: <Widget>[
