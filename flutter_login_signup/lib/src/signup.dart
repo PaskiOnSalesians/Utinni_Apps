@@ -129,58 +129,21 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget _logo() {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 65),
-        child: Row(
-          children: <Widget>[
-            Image(
-              image: AssetImage('img/logoHP.png'),
-              width: 100,
-              height: 100,
-            ), // Image.asset('img/logoHP.png')
-            Text(
-              'Horrocrux',
-              style: TextStyle(fontSize: 30),
-            )
-          ],
-        )
-
-        //  Row(
-        //   children: <Widget>[
-        //     Hero(
-        //       tag: actor.id,
-        //       child: ClipRRect(
-        //         borderRadius: BorderRadius.circular(20.0),
-        //         child: Image(
-        //           image: NetworkImage(actor.getFoto()),
-        //           height: 150.0,
-        //         ),
-        //       ),
-        //     ),
-        //     SizedBox(width: 20.0),
-        //     Flexible(
-        //       child: Column(
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: <Widget>[
-        //           Text(actor.name,
-        //               style: Theme.of(context).textTheme.bodyText1,
-        //               overflow: TextOverflow.ellipsis),
-        //           /*Text(actor.creditId,
-        //               style: Theme.of(context).textTheme.bodyText1,
-        //               overflow: TextOverflow.ellipsis),*/
-        //           Row(
-        //               // children: <Widget>[
-        //               //   Icon(Icons.star_border),
-        //               //   // Text(actor.gender.toString(),
-        //               //   Text(actor.items.toString(),
-        //               //       style: Theme.of(context).textTheme.bodyText1)
-        //               // ],
-        //               )
-        //         ],
-        //       ),
-        //     )
-        //   ],
-        // ),
-        );
+      padding: EdgeInsets.symmetric(horizontal: 55),
+      child: Row(
+        children: <Widget>[
+          Image(
+            image: AssetImage('img/logoHP.png'),
+            width: 100,
+            height: 100,
+          ), // Image.asset('img/logoHP.png')
+          Text(
+            'Horrocrux',
+            style: TextStyle(fontSize: 30),
+          )
+        ],
+      ),
+    );
   }
 
   Widget _emailPasswordWidget() {
@@ -194,32 +157,46 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  bool isChecked = false;
+  bool _agree = false;
 
-  Widget _newsletter() {
-    Color getColor(Set<MaterialState> states) {
-      const Set<MaterialState> interactiveStates = <MaterialState>{
-        MaterialState.pressed,
-        MaterialState.hovered,
-        MaterialState.focused,
-      };
-      if (states.any(interactiveStates.contains)) {
-        return Colors.blue;
-      }
-      return Color(0xffcc00cc);
-    }
-
-    return Checkbox(
-      checkColor: Colors.white,
-      fillColor: MaterialStateProperty.resolveWith(getColor),
-      value: isChecked,
-      onChanged: (bool? value) {
-        setState(() {
-          isChecked = value!;
-        });
-      },
-    );
+  Widget _condiciones() {
+    return Wrap(
+        crossAxisAlignment: WrapCrossAlignment.center,
+        children: <Widget>[
+          Checkbox(
+              value: _agree,
+              onChanged: (isChecked) {
+                setState(() {
+                  _agree = isChecked!;
+                });
+              }),
+          Text("I Agree to the "),
+          InkWell(
+            onTap: () {},
+            child: Text(
+              "Terms of services",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+          Text(" & "),
+          InkWell(
+            onTap: () {},
+            child: Text(
+              "Privacy Policy",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+        ]);
   }
+
+  // Widget _logo(){
+  //   return Container(
+  //     child: Container(
+  //       width: 100,
+  //       height: 100,
+  //     ),
+  //   )
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -236,15 +213,20 @@ class _SignUpPageState extends State<SignUpPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    SizedBox(height: height * .25),
+                    SizedBox(height: height * .12),
                     _logo(),
                     // _title(),
                     SizedBox(
                       height: 20,
                     ),
                     _emailPasswordWidget(),
+
                     SizedBox(height: 20),
-                    _newsletter(),
+                    // _newsletter(),
+
+                    SizedBox(height: 10),
+                    _condiciones(),
+
                     SizedBox(
                       height: 20,
                     ),
