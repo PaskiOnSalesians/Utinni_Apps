@@ -189,13 +189,23 @@ class _SignUpPageState extends State<SignUpPage> {
         ]);
   }
 
-  // Widget _logo(){
+  // Widget _logo() {
   //   return Container(
-  //     child: Container(
-  //       width: 100,
-  //       height: 100,
+  //     padding: EdgeInsets.symmetric(horizontal: 55),
+  //     child: Row(
+  //       children: <Widget>[
+  //         Image(
+  //           image: AssetImage('img/logoHP.png'),
+  //           width: 100,
+  //           height: 100,
+  //         ), // Image.asset('img/logoHP.png')
+  //         Text(
+  //           'Horrocrux',
+  //           style: TextStyle(fontSize: 30),
+  //         )
+  //       ],
   //     ),
-  //   )
+  //   );
   // }
 
   @override
@@ -213,11 +223,11 @@ class _SignUpPageState extends State<SignUpPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    SizedBox(height: height * .12),
+                    SizedBox(height: height * .2),
+                    //_title(),
                     _logo(),
-                    // _title(),
                     SizedBox(
-                      height: 20,
+                      height: 15,
                     ),
                     _emailPasswordWidget(),
 
