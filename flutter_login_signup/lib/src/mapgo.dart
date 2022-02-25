@@ -34,7 +34,7 @@ class _MapgoState extends State<Mapgo> {
     tmp.add(Marker(
         markerId: MarkerId("Casa"),
         position: widget.Casa,
-        infoWindow: InfoWindow(title: "Casa Howdgawards")));
+        infoWindow: InfoWindow(title: "Casa How")));
     tmp.add(Marker(
         markerId: MarkerId("estacio"),
         position: widget.Estacio,
