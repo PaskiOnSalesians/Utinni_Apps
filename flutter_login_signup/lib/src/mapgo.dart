@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+// import 'package:geolocator/geolocator.dart';
 
 class Mapgo extends StatefulWidget {
   final LatLng Casa = LatLng(41.39473136159721, 2.1276748636311775);
@@ -19,6 +20,8 @@ class _MapgoState extends State<Mapgo> {
         title: Text('Mapa districte Sarria'),
       ),
       body: GoogleMap(
+        myLocationButtonEnabled: true,
+        myLocationEnabled: true,
         initialCameraPosition: CameraPosition(
           target: LatLng(41.39473136159721, 2.1276748636311775),
           zoom: 19,
