@@ -91,26 +91,6 @@ class _WelcomePageState extends State<WelcomePage> {
         ));
   }
 
-  // Widget _title() {
-  //   return RichText(
-  //     textAlign: TextAlign.center,
-  //     text: TextSpan(
-  //         text: 'Dragon',
-  //         style: GoogleFonts.portLligatSans(
-  //           textStyle: Theme.of(context).textTheme.headline1,
-  //           fontSize: 30,
-  //           fontWeight: FontWeight.w700,
-  //           color: Colors.white,
-  //         ),
-  //         children: [
-  //           TextSpan(
-  //             text: 'App',
-  //             style: TextStyle(color: Colors.black, fontSize: 30),
-  //           ),
-  //         ]),
-  //   );
-  // }
-
   Widget _logo() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 55),
