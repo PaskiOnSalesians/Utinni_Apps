@@ -37,7 +37,11 @@ class _MapgoState extends State<Mapgo> {
     tmp.add(Marker(
         markerId: MarkerId("Casa"),
         position: widget.Casa,
-        infoWindow: InfoWindow(title: "Casa How")));
+        // icon: ,
+        infoWindow: InfoWindow(
+            title: "Colegio Hogwarts de Magia y Hechicería",
+            snippet:
+                "Hogwarts es una escuela a la cual asisten jóvenes magos para desarrollar sus habilidades mágicas. El edificio, situado en las colinas de Escocia, es visto como un antiguo edificio en ruinas con un cartel que dice 'cuidado, ruinas peligrosas', por las personas ajenas a poderes mágicos (más comúnmente conocidos como muggles). Tiene siete plantas, varias torres, escaleras que cambian de posición a su antojo y extensos terrenos que contienen un lago, un bosque, llamado El Bosque Prohibido, y varios invernaderos con fines botánicos.")));
     tmp.add(Marker(
         markerId: MarkerId("estacio"),
         position: widget.Estacio,
