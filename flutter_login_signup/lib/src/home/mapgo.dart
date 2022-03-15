@@ -20,6 +20,8 @@ class _MapgoState extends State<Mapgo> {
         title: Text('Mapa districte Sarria'),
       ),
       body: GoogleMap(
+        //mapType: MapType.terrain,
+
         myLocationButtonEnabled: true,
         myLocationEnabled: true,
         initialCameraPosition: CameraPosition(

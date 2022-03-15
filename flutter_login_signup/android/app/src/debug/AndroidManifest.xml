@@ -1,12 +1,17 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="thealphamerc.flutter_login_signup">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="thealphamerc.flutter_login_signup">
     <!-- Flutter needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
-    -->
- <application>
-    <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyCAUrtkJOT4VkhClkW_rmh7uXLRpFoNQqE"/>
-</application>
+    -->   
+    
+    <!-- Always include this permission -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Include only if your app benefits from precise location access. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCAUrtkJOT4VkhClkW_rmh7uXLRpFoNQqE"/>
+    </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
