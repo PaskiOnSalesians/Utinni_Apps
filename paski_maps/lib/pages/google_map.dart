@@ -1,7 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-//import '../components/circular_button.dart';
 import '../components/main_menu.dart';
 
 class MyGoogleMap extends StatefulWidget {
@@ -34,22 +35,20 @@ class _MyMyGoogleMapState extends State<MyGoogleMap>{
         backgroundColor: Colors.lightGreen,
         centerTitle: true,
       ),
-      body: Container(
-        child: Stack(
+      body: Stack(
           children: <Widget>[            
             GoogleMap(
               mapType: MapType.normal,
               initialCameraPosition: _kInitialPosition,
               onMapCreated: onMapCreated,
+              zoomControlsEnabled: false,
               myLocationEnabled: true,
               myLocationButtonEnabled: true,
-              zoomControlsEnabled: false,
-              padding: EdgeInsets.fromLTRB(0, MediaQuery.of(context).size.height / 1.3, MediaQuery.of(context).size.width / 1.2, 0),
+              //padding: EdgeInsets.fromLTRB(0, MediaQuery.of(context).size.height / 1.3, MediaQuery.of(context).size.width / 1.2, 0),
             ),
             MainMenu()
           ]
         )
-      ),
     );
   }
 }

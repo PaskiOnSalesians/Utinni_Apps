@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_google_map/components/circular_button.dart';
 
 class MainMenu extends StatefulWidget {
+  const MainMenu({Key? key}) : super(key: key);
+
 
   @override
   State<MainMenu> createState() => _MyMainMenuState();
