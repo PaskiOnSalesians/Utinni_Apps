@@ -17,7 +17,8 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback(
+    // WidgetsBinding.instance!.addPostFrameCallback
+    WidgetsBinding.instance.addPostFrameCallback(
       (_) {
         _controller.checkPermission();
       },

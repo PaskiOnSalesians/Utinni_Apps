@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 // import 'package:geolocator/geolocator.dart';
 
+import '../components/main_menu.dart';
+
 class Mapgo extends StatefulWidget {
   final LatLng Casa = LatLng(41.39473136159721, 2.1276748636311775);
   final LatLng Estacio = LatLng(41.39836145166467, 2.1258408980216323);
@@ -20,16 +22,25 @@ class _MapgoState extends State<Mapgo> {
         title: Text('Mapa districte Sarria'),
       ),
       body: GoogleMap(
-        //mapType: MapType.terrain,
-
+        mapType: MapType.terrain,
+        //onMapCreated: onMapCreated,
         myLocationButtonEnabled: true,
         myLocationEnabled: true,
+        zoomControlsEnabled: false,
+        mapToolbarEnabled:
+            false, //Treu l'opcio de que si selecionem una marked ens dongui ruta
         initialCameraPosition: CameraPosition(
           target: LatLng(41.39473136159721, 2.1276748636311775),
           zoom: 19,
         ),
         markers: _createMarkers(),
+        padding: EdgeInsets.fromLTRB(
+            0,
+            MediaQuery.of(context).size.height / 1.3,
+            MediaQuery.of(context).size.width / 1.2,
+            0),
       ),
+      //  MainMenu()
     );
   }
 
