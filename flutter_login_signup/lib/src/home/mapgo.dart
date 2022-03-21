@@ -28,7 +28,7 @@ class _MapgoState extends State<Mapgo> {
         myLocationEnabled: true,
         zoomControlsEnabled: false,
         mapToolbarEnabled:
-            false, //Treu l'opcio de que si selecionem una marked ens dongui ruta
+            false, //Treu l'opcio de que si selecionem una marked ens dongui rutas
         initialCameraPosition: CameraPosition(
           target: LatLng(41.39473136159721, 2.1276748636311775),
           zoom: 19,
