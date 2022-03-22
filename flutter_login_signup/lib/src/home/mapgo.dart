@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:flutter_login_signup/src/components/main_menu.dart';
 // import 'package:geolocator/geolocator.dart';
 
 import '../components/main_menu.dart';
@@ -21,26 +22,26 @@ class _MapgoState extends State<Mapgo> {
       appBar: AppBar(
         title: Text('Mapa districte Sarria'),
       ),
-      body: GoogleMap(
-        mapType: MapType.terrain,
-        //onMapCreated: onMapCreated,
-        myLocationButtonEnabled: true,
-        myLocationEnabled: true,
-        zoomControlsEnabled: false,
-        mapToolbarEnabled:
-            false, //Treu l'opcio de que si selecionem una marked ens dongui rutas
-        initialCameraPosition: CameraPosition(
-          target: LatLng(41.39473136159721, 2.1276748636311775),
-          zoom: 19,
-        ),
-        markers: _createMarkers(),
-        padding: EdgeInsets.fromLTRB(
-            0,
-            MediaQuery.of(context).size.height / 1.3,
-            MediaQuery.of(context).size.width / 1.2,
-            0),
-      ),
-      //  MainMenu()
+      body: Stack(
+        children: [
+          GoogleMap(
+            mapType: MapType.terrain,
+            //onMapCreated: onMapCreated,
+            myLocationButtonEnabled: true,
+            myLocationEnabled: true,
+            zoomControlsEnabled: false,
+            mapToolbarEnabled:
+                false, //Treu l'opcio de que si selecionem una marked ens dongui rutas
+            initialCameraPosition: CameraPosition(
+              target: LatLng(41.39473136159721, 2.1276748636311775),
+              zoom: 19,
+            ),
+            markers: _createMarkers(),
+            padding: EdgeInsets.fromLTRB(0,0,0,0),
+          ),
+          MainMenu()
+        ],
+      )
     );
   }
 

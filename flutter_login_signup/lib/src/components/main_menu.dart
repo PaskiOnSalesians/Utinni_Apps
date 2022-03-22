@@ -40,7 +40,7 @@ class _MyMainMenuState extends State<MainMenu>
   Widget build(BuildContext context) {
     return Positioned(
         right: 50,
-        bottom: 40,
+        bottom: 80,
         child: Stack(children: <Widget>[
           Transform.translate(
             offset: Offset.fromDirection(getRadiansFromDegree(290),
