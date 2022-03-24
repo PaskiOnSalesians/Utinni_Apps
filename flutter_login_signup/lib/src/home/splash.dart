@@ -15,7 +15,7 @@ class Splash extends StatelessWidget{
           ),
 
           Image.asset('img/logoHP.png', width: 120, height: 120),
-          Text("Horrocrux", style: TextStyle(color: Colors.black, fontSize: 16))
+          //Text("Horrocrux", style: TextStyle(color: Colors.black, fontSize: 16))
           
 
         ]
