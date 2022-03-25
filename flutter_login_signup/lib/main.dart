@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_signup/src/routes/pages.dart';
-import 'package:flutter_login_signup/src/routes/routes.dart';
+// import 'package:flutter_login_signup/src/routes/pages.dart';
+// import 'package:flutter_login_signup/src/routes/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:ui';
+// import 'dart:ui';
 import 'src/home/welcomePage.dart';
 
 void main() => runApp(MyApp());
