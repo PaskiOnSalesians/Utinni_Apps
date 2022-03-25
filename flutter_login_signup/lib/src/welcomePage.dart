@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_signup/src/loginPage.dart';
 import 'package:flutter_login_signup/src/signup.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_login_signup/src/Quiz/QuizHome.dart';
 
 class WelcomePage extends StatefulWidget {
   WelcomePage({Key? key, this.title}) : super(key: key);
@@ -63,6 +63,28 @@ class _WelcomePageState extends State<WelcomePage> {
     );
   }
 
+  Widget _QuizButton() {
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Home()));
+      },
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.symmetric(vertical: 13),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(5)),
+          border: Border.all(color: Colors.white, width: 2),
+        ),
+        child: Text(
+          'QUIZ',
+          style: TextStyle(fontSize: 20, color: Colors.white),
+        ),
+      ),
+    );
+  }
+
   Widget _label() {
     return Container(
         margin: EdgeInsets.only(top: 40, bottom: 20),
@@ -90,26 +112,6 @@ class _WelcomePageState extends State<WelcomePage> {
           ],
         ));
   }
-
-  // Widget _title() {
-  //   return RichText(
-  //     textAlign: TextAlign.center,
-  //     text: TextSpan(
-  //         text: 'Dragon',
-  //         style: GoogleFonts.portLligatSans(
-  //           textStyle: Theme.of(context).textTheme.headline1,
-  //           fontSize: 30,
-  //           fontWeight: FontWeight.w700,
-  //           color: Colors.white,
-  //         ),
-  //         children: [
-  //           TextSpan(
-  //             text: 'App',
-  //             style: TextStyle(color: Colors.black, fontSize: 30),
-  //           ),
-  //         ]),
-  //   );
-  // }
 
   Widget _logo() {
     return Container(
@@ -170,6 +172,10 @@ class _WelcomePageState extends State<WelcomePage> {
                   height: 20,
                 ),
                 _signUpButton(),
+                SizedBox(
+                  height: 20,
+                ),
+                _QuizButton(),
                 SizedBox(
                   height: 20,
                 ),

@@ -48,7 +48,9 @@ class _SignUpPageState extends State<SignUpPage> {
                   border: InputBorder.none,
                   hintText: title,
                   fillColor: Color(0xfff3f3f4),
-                  filled: true)),
+                  filled: true
+                )
+            ),
         ],
       ),
     );
