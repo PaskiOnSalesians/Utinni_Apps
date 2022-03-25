@@ -114,19 +114,6 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  // Widget _title() {
-  //   return RichText(
-  //     textAlign: TextAlign.right,
-  //     text: TextSpan(
-  //       text: 'DragonApp',
-  //       style: TextStyle(
-  //           fontSize: 30,
-  //           fontWeight: FontWeight.w700,
-  //           color: Color(0xffcc00cc)),
-  //     ),
-  //   );
-  // }
-
   Widget _logo() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 55),
@@ -145,26 +132,6 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
     );
   }
-
-  // Widget _title() {
-  //   return RichText(
-  //     textAlign: TextAlign.center,
-  //     text: TextSpan(
-  //         text: 'Dragon',
-  //         style: TextStyle(
-  //             fontSize: 30,
-  //             fontWeight: FontWeight.w700,
-  //             color: Color(0xffcc00cc)
-  //         ),
-
-  //         children: [
-  //           TextSpan(
-  //             text: 'App',
-  //             style: TextStyle(color: Colors.black, fontSize: 30),
-  //           ),
-  //         ]),
-  //   );
-  // }
 
   Widget _emailPasswordWidget() {
     return Column(
@@ -208,25 +175,6 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
         ]);
   }
-
-  // Widget _logo() {
-  //   return Container(
-  //     padding: EdgeInsets.symmetric(horizontal: 55),
-  //     child: Row(
-  //       children: <Widget>[
-  //         Image(
-  //           image: AssetImage('img/logoHP.png'),
-  //           width: 100,
-  //           height: 100,
-  //         ), // Image.asset('img/logoHP.png')
-  //         Text(
-  //           'Horrocrux',
-  //           style: TextStyle(fontSize: 30),
-  //         )
-  //       ],
-  //     ),
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {
