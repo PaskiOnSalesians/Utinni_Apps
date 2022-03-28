@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
     setState(() {
       answerWasSelected = false;
     });
-  }hgjdfgdfgdddd
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -174,51 +174,51 @@ class _HomeState extends State<Home> {
 
 final _questions = const [
   {
-    'question': 'Hola?',
+    'question': 'Qué escoba recibió Harry en su primer año?',
     'answers': [
-      {'answerText': 'Sí.', 'score': true},
-      {'answerText': 'No.', 'score': false},
-      {'answerText': 'No.', 'score': false},
+      {'answerText': 'Nimbus 2000', 'score': true},
+      {'answerText': 'Nimbus 2001', 'score': false},
+      {'answerText': 'Saeta de fuego', 'score': false},
     ],
   },
   {
-    'question': 'Hola?',
+    'question': 'De parte de quien recibió Harry su primera escoba?',
     'answers': [
-      {'answerText': 'No.', 'score': false},
-      {'answerText': 'No.', 'score': false},
-      {'answerText': 'Sí.', 'score': true},
+      {'answerText': 'Rubeus Hagrid', 'score': false},
+      {'answerText': 'Albus Dumbledore', 'score': false},
+      {'answerText': 'Minerva McGonagall', 'score': true},
     ],
   },
   {
-    'question': 'Hola?',
+    'question': 'Cuantos puntos recibe el equipo que pasa una bola por un aro?',
     'answers': [
-      {'answerText': 'Sí.', 'score': true},
-      {'answerText': 'No.', 'score': false},
-      {'answerText': 'No.', 'score': false},
+      {'answerText': '20', 'score': false},
+      {'answerText': '5', 'score': false},
+      {'answerText': '10', 'score': true},
     ],
   },
   {
-    'question': 'Hola?',
+    'question': 'Cuantos tipos de bolas hay?',
     'answers': [
-      {'answerText': 'Sí.', 'score': true},
-      {'answerText': 'No.', 'score': false},
-      {'answerText': 'No.', 'score': false},
+      {'answerText': '2', 'score': false},
+      {'answerText': '3', 'score': true},
+      {'answerText': '4', 'score': false},
     ],
   },
   {
-    'question': 'Hola?',
+    'question': 'Qué rol tenía Oliver Wood en su equipo?',
     'answers': [
-      {'answerText': 'Sí.', 'score': true},
-      {'answerText': 'No.', 'score': false},
-      {'answerText': 'No.', 'score': false},
+      {'answerText': 'Buscador', 'score': false},
+      {'answerText': 'Guardián', 'score': true},
+      {'answerText': 'Golpeador', 'score': false},
     ],
   },
   {
-    'question': 'Hola?',
+    'question': 'Cuantos puntos proporciona la Snitch Dorada?',
     'answers': [
-      {'answerText': 'Sí.', 'score': true},
-      {'answerText': 'No.', 'score': false},
-      {'answerText': 'No.', 'score': false},
+      {'answerText': '150', 'score': true},
+      {'answerText': '100', 'score': false},
+      {'answerText': '200', 'score': false},
     ],
   },
 ];
