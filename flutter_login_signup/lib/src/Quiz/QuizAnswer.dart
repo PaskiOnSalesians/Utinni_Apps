@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   final String answerText;
-  final Color answerColor;
+  final MaterialColor? answerColor;
   final Function answerTap;
 
   Answer({required this.answerText, required this.answerColor, required this.answerTap});

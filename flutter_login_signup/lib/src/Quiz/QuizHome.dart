@@ -46,6 +46,14 @@ class _HomeState extends State<Home> {
   }
 
   @override
+  void initState(){
+    super.initState();
+    setState(() {
+      answerWasSelected = false;
+    });
+  }hgjdfgdfgdddd
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -92,7 +100,7 @@ class _HomeState extends State<Home> {
               (answer) => Answer(
                 answerText: answer['answerText'].toString(),
                 answerColor: answerWasSelected
-                    ? answer['score']
+                    ? answer['score'] != null
                         ? Colors.green
                         : Colors.red
                     : null,
@@ -100,7 +108,7 @@ class _HomeState extends State<Home> {
                   if (answerWasSelected) {
                     return;
                   }
-                  _questionAnswered(answer['score']);
+                  _questionAnswered(answer['score'] != null);
                 },
               ),
             ),
