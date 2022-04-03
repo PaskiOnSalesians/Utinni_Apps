@@ -4,7 +4,24 @@
             "outputFile": "C:\\Users\\carsh\\OneDrive - INSPECTORIA SALESIANA MARIA AUXILIADORA\\Documentos\\GitHub\\FlutterAppsUtinni\\flutter_login_signup\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ta\\values-ta.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\carsh\\.gradle\\caches\\transforms-2\\files-2.1\\6b399c2363bb098ebde1725d903cbda0\\core-1.1.0\\res\\values-ta\\values-ta.xml",
+                    "source": "C:\\Users\\carsh\\.gradle\\caches\\transforms-2\\files-2.1\\4b2af2ba4ecb8adad7dcc349923b0559\\jetified-play-services-basement-17.0.0\\res\\values-ta\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "224",
+                        "endOffsets": "471"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1247",
+                        "endColumns": "224",
+                        "endOffsets": "1467"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\carsh\\.gradle\\caches\\transforms-2\\files-2.1\\e7c642788470a9560e9c6c3e0256d482\\core-1.1.0\\res\\values-ta\\values-ta.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\carsh\\.gradle\\caches\\transforms-2\\files-2.1\\2f220e4626961757d61af53add94b7ee\\play-services-base-17.0.0\\res\\values-ta\\values.xml",
+                    "source": "C:\\Users\\carsh\\.gradle\\caches\\transforms-2\\files-2.1\\4fa0368d6f23c9336e9d166bf2e4215e\\play-services-base-17.0.0\\res\\values-ta\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -35,23 +52,6 @@
                         "startOffsets": "105,212,396,525,633,844,974,1117,1472,1714,1823,2007,2144,2357,2543,2635,2728",
                         "endColumns": "106,183,128,107,210,129,142,129,241,108,183,136,212,185,91,92,109",
                         "endOffsets": "207,391,520,628,839,969,1112,1242,1709,1818,2002,2139,2352,2538,2630,2723,2833"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\carsh\\.gradle\\caches\\transforms-2\\files-2.1\\68da6f5ad9538458b74c21518a7f8162\\jetified-play-services-basement-17.0.0\\res\\values-ta\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "224",
-                        "endOffsets": "471"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1247",
-                        "endColumns": "224",
-                        "endOffsets": "1467"
                     }
                 }
             ]

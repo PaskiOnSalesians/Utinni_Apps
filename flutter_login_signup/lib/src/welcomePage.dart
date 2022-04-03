@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login_signup/src/loginPage.dart';
 import 'package:flutter_login_signup/src/signup.dart';
 import 'package:flutter_login_signup/src/Quiz/QuizHome.dart';
+import 'package:flutter_login_signup/screens/quiz/quiz_screen.dart';
 
 class WelcomePage extends StatefulWidget {
   WelcomePage({Key? key, this.title}) : super(key: key);
@@ -67,7 +68,7 @@ class _WelcomePageState extends State<WelcomePage> {
     return InkWell(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Home()));
+            context, MaterialPageRoute(builder: (context) => QuizScreen()));
       },
       child: Container(
         width: MediaQuery.of(context).size.width,

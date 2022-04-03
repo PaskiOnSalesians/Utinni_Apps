@@ -5,7 +5,7 @@ class Answer extends StatelessWidget {
   final MaterialColor? answerColor;
   final Function answerTap;
 
-  Answer({required this.answerText, required this.answerColor, required this.answerTap});
+  Answer({required this.answerText,required this.answerColor, required this.answerTap});
 
   @override
   Widget build(BuildContext context) {

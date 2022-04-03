@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
   bool correctAnswerSelected = false;
 
   void _questionAnswered(bool answerScore) {
-    setState(() {
+    //setState(() {
       answerWasSelected = true;
       if (answerScore) {
         _totalScore++;
@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
       if (_questionIndex + 1 == _questions.length) {
         endOfQuiz = true;
       }
-    });
+    //});
   }
 
   void _nextQuestion() {
