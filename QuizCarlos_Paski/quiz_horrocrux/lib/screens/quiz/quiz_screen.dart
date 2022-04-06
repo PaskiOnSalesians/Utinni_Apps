@@ -12,12 +12,8 @@ class QuizScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        // Fluttter show the back button automatically
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: [
-          FlatButton(onPressed: _controller.nextQuestion, child: const Text("Skip")),
-        ],
       ),
       body: const Body(),
     );

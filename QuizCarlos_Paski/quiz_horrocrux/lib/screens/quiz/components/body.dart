@@ -14,7 +14,6 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // So that we have acccess our controller
     QuestionController _questionController = Get.put(QuestionController());
     return Stack(
       children: [
@@ -58,7 +57,6 @@ class Body extends StatelessWidget {
               const SizedBox(height: kDefaultPadding),
               Expanded(
                 child: PageView.builder(
-                  // Block swipe to next qn
                   physics: const NeverScrollableScrollPhysics(),
                   controller: _questionController.pageController,
                   onPageChanged: _questionController.updateTheQnNum,
